@@ -1,5 +1,7 @@
 # CS361_Project
 
-I'm currently working on figuring out exactly what I want my project to be. I'm thinking about making a program that helps users learn about various drugs or basic medicine facts. The program could have categories, like Antihistamines or Anticoagulants, and when the user clicks on a category, the most important drugs and facts about that category shows up followed by a quiz to see how well they learned the information. 
+This project is a website where a user can learn about various medical drug topics and quiz themselves on what they learned. This project is for my Software Engineering class to practice producing content for other people's projects and consuming content from other people's projects. Microservices are used to produce and consume content.
 
-This will be part of a group project where I create a service someone else will use and consume a service someone else produces. I am currently figuring out what services I will produce/consume.
+My project consumes a web scraper microservice (not implemented yet - currently, I copy and pasted information)
+
+My project produces a clock microservice where the client requests what time it will be later (for example, they can request what time it will be in 4 hours).
