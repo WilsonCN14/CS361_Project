@@ -1,0 +1,21 @@
+.timer, .quiz {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid navy;
+    font-size: 18px;
+}
+
+.submit {
+    background-color: navy;
+    color: white;
+    padding: 8px 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: forestgreen;
+}

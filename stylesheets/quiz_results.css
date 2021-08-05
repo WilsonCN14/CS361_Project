@@ -1,0 +1,32 @@
+.quiz_results {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid navy;
+    font-size: 18px;
+}
+
+.go_back {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.go_back a {
+    background-color: navy;
+    color: white;
+    padding: 8px 20px;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.go_back a:hover {
+    background-color: forestgreen;
+}

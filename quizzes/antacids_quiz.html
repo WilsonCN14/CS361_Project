@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/quiz.css">
+    <title>Antacids Quiz</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Homepage</a></li>
+            <li><a href="/drugs/analgesics.html">Analgesics</a></li>
+        </ul>
+    </nav>
+
+    <h1>Antacids Quiz</h1>
+
+
+    <div class="timer">
+        <h3>For a challenge, give yourself 10 minutes to complete the quiz!</h3>
+        <button onclick="setTimer(0,10,0)">Start Timer!</button>
+        <p id="timer"></p>
+    </div>
+
+    <br>
+
+
+    <div class="quiz">
+        <form action="/quiz_results/antacids_results.html">
+            <h3>1. What is an antacid?</h3>
+    
+            <input type="radio" id="painkiller" name="antacid" value="painkiller">
+            <label for="painkiller">Painkiller</label><br>
+    
+            <input type="radio" id="neutralizer" name="antacid" value="neutralizer">
+            <label for="neutralizer">Substance that neutralizes stomach acid</label><br>
+    
+            <input type="radio" id="cough" name="antacid" value="cough">
+            <label for="cough">Cough Suppressant</label><br>
+    
+            <input type="radio" id="sedative" name="antacid" value="sedative">
+            <label for="sedative">Sedative</label><br>
+    
+            <h3>2. True/False. Antacids are used in the treatment of constipation and diarrhea</h3>
+    
+            <input type="radio" id="true" name="treatment" value="true">
+            <label for="true">True</label><br>
+    
+            <input type="radio" id="false" name="treatment" value="false">
+            <label for="false">False</label><br>
+    
+            <h3>3. True/False. Some antacids contain a combination of two salts.</h3>
+    
+            <input type="radio" id="true" name="two_salts" value="true">
+            <label for="true">True</label><br>
+    
+            <input type="radio" id="false" name="two_salts" value="false">
+            <label for="false">False</label><br>
+    
+            <input class="submit" type="submit" value="Submit Quiz">
+        </form>
+    </div>
+
+    <script src="/timer.js"></script>
+    <script src="/app.js"></script>
+
+</body>
+</html>

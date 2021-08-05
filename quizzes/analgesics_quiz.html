@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/quiz.css">
+    <title>Analgesics Quiz</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Homepage</a></li>
+            <li><a href="/drugs/analgesics.html">Analgesics</a></li>
+            <li><a href="/drugs/antacids.html">Antacids</a></li>
+            <li><a href="/drugs/antianxiety.html">Antianxiety Drugs</a></li>
+            <li><a href="/drugs/antiarrhythmics.html">Antiarrhythmics</a></li>
+            <li><a href="/drugs/antibiotics.html">Antibiotics</a></li>
+            <li><a href="/drugs/anticoagulants.html">Anticoagulants</a></li>
+        </ul>
+    </nav>
+
+    <h1>Analgesics Quiz</h1>
+
+    <div class="timer">
+        <h3>For a challenge, give yourself 10 minutes to complete the quiz!</h3>
+        <button onclick="setTimer(0,10,0)">Start Timer!</button>
+        <p id="timer"></p>
+    </div>
+
+    <br>
+
+    <div class="quiz">
+        <form action="/quiz_results/analgesics_results.html">
+            <h3>1. What is an analgesic?</h3>
+    
+            <input type="radio" id="painkiller" name="analgesic" value="painkiller">
+            <label for="painkiller">Painkiller</label><br>
+    
+            <input type="radio" id="antidepressant" name="analgesic" value="antidepressant">
+            <label for="antidepressant">Antidepressant</label><br>
+    
+            <input type="radio" id="cough" name="analgesic" value="cough">
+            <label for="cough">Cough Suppressant</label><br>
+    
+            <input type="radio" id="sedative" name="analgesic" value="sedative">
+            <label for="sedative">Sedative</label><br>
+    
+            <h3>2. True/False. There is only one type of pain.</h3>
+    
+            <input type="radio" id="true" name="one_pain" value="true">
+            <label for="true">True</label><br>
+    
+            <input type="radio" id="false" name="one_pain" value="false">
+            <label for="false">False</label><br>
+    
+            <h3>3. True/False. Traditional analgesics are the best option for neuropathic pain.</h3>
+    
+            <input type="radio" id="true" name="neuropathic" value="true">
+            <label for="true">True</label><br>
+    
+            <input type="radio" id="false" name="neuropathic" value="false">
+            <label for="false">False</label><br>
+    
+            <input class="submit" type="submit" value="Submit Quiz">
+        </form>
+    </div>
+
+    <script src="/timer.js"></script>
+    <script src="/app.js"></script>
+
+</body>
+</html>

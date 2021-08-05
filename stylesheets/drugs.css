@@ -1,0 +1,39 @@
+.info {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid navy;
+    font-size: 18px;
+}
+
+.citation {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.take_quiz {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid navy;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.take_quiz a {
+    background-color: navy;
+    color: white;
+    padding: 8px 20px;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.take_quiz a:hover {
+    background-color: forestgreen;
+}

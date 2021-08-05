@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/quiz.css">
+    <title>Antiarrhythmics Quiz</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Homepage</a></li>
+            <li><a href="/drugs/analgesics.html">Analgesics</a></li>
+        </ul>
+    </nav>
+
+    <h1>Antiarrhythmics Quiz</h1>
+
+
+    <div class="timer">
+        <h3>For a challenge, give yourself 10 minutes to complete the quiz!</h3>
+        <button onclick="setTimer(0,10,0)">Start Timer!</button>
+        <p id="timer"></p>
+    </div>
+
+    <br>
+
+
+    <div class="quiz">
+        <form action="/quiz_results/antiarrhythmics_results.html">
+            <h3>1. What are antiarrhthmics?</h3>
+    
+            <input type="radio" id="antiarrhthmics" name="antiarrhthmics" value="antiarrhthmics">
+            <label for="antiarrhthmics">Drugs that suppress abnormal rhythms of the heart</label><br>
+    
+            <input type="radio" id="antidepressant" name="antiarrhthmics" value="antidepressant">
+            <label for="antidepressant">Antidepressants</label><br>
+    
+            <input type="radio" id="anxiety" name="antiarrhthmics" value="anxiety">
+            <label for="anxiety">Reduce Anxiety</label><br>
+    
+            <input type="radio" id="sedative" name="antiarrhthmics" value="sedative">
+            <label for="sedative">Sedatives</label><br>
+    
+            <h3>2. True/False. Antiarrhythmics can be used for atrial fibrillation.</h3>
+    
+            <input type="radio" id="true" name="afib" value="true">
+            <label for="true">True</label><br>
+    
+            <input type="radio" id="false" name="afib" value="false">
+            <label for="false">False</label><br>
+    
+            <h3>3. True/False. It is easy to classify antiarrhthmics.</h3>
+    
+            <input type="radio" id="true" name="classify" value="true">
+            <label for="true">True</label><br>
+    
+            <input type="radio" id="false" name="classify" value="false">
+            <label for="false">False</label><br>
+    
+            <input class="submit" type="submit" value="Submit Quiz">
+        </form>
+    </div>
+
+    <script src="/timer.js"></script>
+    <script src="/app.js"></script>
+
+</body>
+</html>
