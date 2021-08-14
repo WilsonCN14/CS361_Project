@@ -10,62 +10,81 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="/index.html">Homepage</a></li>
-            <li><a href="/drugs/analgesics.html">Analgesics</a></li>
-        </ul>
+        <a href="/index.html">Homepage</a>
+
+        <div class="dropdown">
+            <button class="dropdownButton"">Drug Topics &#129139;</button>
+
+            <div class="dropdownContent">
+                <a href="/drugs/analgesics.html">Analgesics</a>
+                <a href="/drugs/antacids.html">Antacids</a>
+                <a href="/drugs/antiarrhythmics.html">Antiarrhythmics</a>
+                <a href="/drugs/antibiotics.html">Antibiotics</a>
+                <a href="/drugs/anticoagulants.html">Anticoagulants</a>
+                <a href="/drugs/antidepressants.html">Antidepressants</a>
+                <a href="/drugs/antiemetics.html">Antiemetics</a>
+                <a href="/drugs/antihistamines.html">Antihistamines</a>
+                <a href="/drugs/antihypertensives.html">Antihypertensives</a>
+                <a href="/drugs/antipyretics.html">Antipyretics</a>
+                <a href="/drugs/antivirals.html">Antivirals</a>
+                <a href="/drugs/beta-blockers.html">Beta-Blockers</a>
+                <a href="/drugs/bronchodilators.html">Bronchodilators</a>
+                <a href="/drugs/decongestants.html">Decongestants</a>
+                <a href="/drugs/diuretics.html">Diuretics</a>
+                <a href="/drugs/laxatives.html">Laxatives</a>
+                <a href="/drugs/muscle-relaxants.html">Muscle Relaxants</a>
+                <a href="/drugs/sedatives.html">Sedatives</a>
+            </div>
+        </div>
     </nav>
 
     <h1>Antiarrhythmics Quiz</h1>
 
-
-    <div class="timer">
-        <h3>For a challenge, give yourself 10 minutes to complete the quiz!</h3>
-        <button onclick="setTimer(0,10,0)">Start Timer!</button>
-        <p id="timer"></p>
+    <div class="quiz">
+        <div id="quiz"></div>
+        <button id="submit">Get Results</button>
+        <div id="results"></div>
     </div>
 
     <br>
 
-
-    <div class="quiz">
-        <form action="/quiz_results/antiarrhythmics_results.html">
-            <h3>1. What are antiarrhthmics?</h3>
-    
-            <input type="radio" id="antiarrhthmics" name="antiarrhthmics" value="antiarrhthmics">
-            <label for="antiarrhthmics">Drugs that suppress abnormal rhythms of the heart</label><br>
-    
-            <input type="radio" id="antidepressant" name="antiarrhthmics" value="antidepressant">
-            <label for="antidepressant">Antidepressants</label><br>
-    
-            <input type="radio" id="anxiety" name="antiarrhthmics" value="anxiety">
-            <label for="anxiety">Reduce Anxiety</label><br>
-    
-            <input type="radio" id="sedative" name="antiarrhthmics" value="sedative">
-            <label for="sedative">Sedatives</label><br>
-    
-            <h3>2. True/False. Antiarrhythmics can be used for atrial fibrillation.</h3>
-    
-            <input type="radio" id="true" name="afib" value="true">
-            <label for="true">True</label><br>
-    
-            <input type="radio" id="false" name="afib" value="false">
-            <label for="false">False</label><br>
-    
-            <h3>3. True/False. It is easy to classify antiarrhthmics.</h3>
-    
-            <input type="radio" id="true" name="classify" value="true">
-            <label for="true">True</label><br>
-    
-            <input type="radio" id="false" name="classify" value="false">
-            <label for="false">False</label><br>
-    
-            <input class="submit" type="submit" value="Submit Quiz">
-        </form>
+    <div class="go_back">
+        <div><a href="/drugs/antiarrhythmics.html">Go Back to Antiarrhythmics</a></div>
+        <div><a href="/index.html">Back to Homepage</a></div>
     </div>
 
-    <script src="/timer.js"></script>
-    <script src="/app.js"></script>
+    <script>
+        var questions = [
+        {
+            question: "What are antiarrhthmics?",
+            answers: {
+                A: 'Drugs that suppress abnormal rhythms of the heart',
+                B: 'Antidepressants',
+                C: 'Anxiety reducers',
+                D: 'Sedatives'
+            },
+            correctAnswer: 'A'
+        },
+        {
+            question: "True/False. Antiarrhythmics can be used for atrial fibrillation.",
+            answers: {
+                A: 'True',
+                B: 'False'
+            },
+            correctAnswer: 'T'
+        },
+        {
+            question: "True/False. It is easy to classify antiarrhthmics.",
+            answers: {
+                A: 'True',
+                B: 'False'
+            },
+            correctAnswer: 'B'
+        }
+    ];
+    </script>
+
+    <script src="/quiz.js"></script>
 
 </body>
 </html>

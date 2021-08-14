@@ -6,60 +6,88 @@ body {
 }
 
 /* Title of page */
-h1{
+h1 {
     text-align: center;
     font-size: 48px;
 }
 
 /* Navigation Bar */
-nav ul {
-    background-color:navy;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+nav {
     overflow: hidden;
+    background-color: navy;
 }
-
-nav li {
+  
+nav a {
     float: left;
-}
-
-nav li a {
-    display: block;
+    font-size: 16px;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
+  
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
 
-nav li a:hover {
+.dropdown .dropdownButton {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+}
+
+nav a:hover, .dropdown:hover .dropdownButton, nav .current {
     background-color: forestgreen;
 }
 
-/* Topics and Suggestions Divs (only for homepage) */
-.container {
-    display: flex;
-    justify-content: center;
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: navy;
+    z-index: 1;
 }
 
-.topics, .suggestions{
-    width: 50%;
+.dropdownContent a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdownContent a:hover {
+    background-color: forestgreen;
+}
+
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+/* Intro and Topics Divs (only for homepage) */
+.intro, .topics h2, .topics h3{
+    text-align: center;
+}
+
+.intro, .topics{
+    width: 80%;
     padding: 20px;
-    margin: 20px;
+    margin: auto;
     border: 2px solid navy;
 }
 
-.topics ul, .suggestions ul {
+.intro ul, .topics ul {
     list-style-type: none;
 }
 
-.topics li {
-    float: left;
-    margin: 20px;
-    width: 25%;
-}
-
-.topics li a, .suggestions li a {
+.intro a, .topics a {
     background-color: navy;
     color: white;
     padding: 8px 20px;
@@ -69,11 +97,19 @@ nav li a:hover {
     cursor: pointer;
 }
 
-.topics li a:hover, .suggestions li a:hover {
+.intro a:hover, .topics a:hover {
     background-color: forestgreen;
 }
 
-.suggestions li {
+.intro li, .topics li {
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 25px;
+}
+
+.list {
+    display: flex;
+}
+
+.first_half, .second_half{
+    width: 50%;
 }

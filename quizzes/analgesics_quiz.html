@@ -10,65 +10,80 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="/index.html">Homepage</a></li>
-            <li><a href="/drugs/analgesics.html">Analgesics</a></li>
-            <li><a href="/drugs/antacids.html">Antacids</a></li>
-            <li><a href="/drugs/antianxiety.html">Antianxiety Drugs</a></li>
-            <li><a href="/drugs/antiarrhythmics.html">Antiarrhythmics</a></li>
-            <li><a href="/drugs/antibiotics.html">Antibiotics</a></li>
-            <li><a href="/drugs/anticoagulants.html">Anticoagulants</a></li>
-        </ul>
+        <a href="/index.html">Homepage</a>
+
+        <div class="dropdown">
+            <button class="dropdownButton"">Drug Topics &#129139;</button>
+
+            <div class="dropdownContent">
+                <a href="/drugs/analgesics.html">Analgesics</a>
+                <a href="/drugs/antacids.html">Antacids</a>
+                <a href="/drugs/antiarrhythmics.html">Antiarrhythmics</a>
+                <a href="/drugs/antibiotics.html">Antibiotics</a>
+                <a href="/drugs/anticoagulants.html">Anticoagulants</a>
+                <a href="/drugs/antidepressants.html">Antidepressants</a>
+                <a href="/drugs/antiemetics.html">Antiemetics</a>
+                <a href="/drugs/antihistamines.html">Antihistamines</a>
+                <a href="/drugs/antihypertensives.html">Antihypertensives</a>
+                <a href="/drugs/antipyretics.html">Antipyretics</a>
+                <a href="/drugs/antivirals.html">Antivirals</a>
+                <a href="/drugs/beta-blockers.html">Beta-Blockers</a>
+                <a href="/drugs/bronchodilators.html">Bronchodilators</a>
+                <a href="/drugs/decongestants.html">Decongestants</a>
+                <a href="/drugs/diuretics.html">Diuretics</a>
+                <a href="/drugs/laxatives.html">Laxatives</a>
+                <a href="/drugs/muscle-relaxants.html">Muscle Relaxants</a>
+                <a href="/drugs/sedatives.html">Sedatives</a>
+            </div>
+        </div>
     </nav>
 
     <h1>Analgesics Quiz</h1>
 
-    <div class="timer">
-        <h3>For a challenge, give yourself 10 minutes to complete the quiz!</h3>
-        <button onclick="setTimer(0,10,0)">Start Timer!</button>
-        <p id="timer"></p>
+    <div class="quiz">
+        <div id="quiz"></div>
+        <button id="submit">Submit Quiz</button>
+        <div id="results"></div>
     </div>
 
     <br>
 
-    <div class="quiz">
-        <form action="/quiz_results/analgesics_results.html">
-            <h3>1. What is an analgesic?</h3>
-    
-            <input type="radio" id="painkiller" name="analgesic" value="painkiller">
-            <label for="painkiller">Painkiller</label><br>
-    
-            <input type="radio" id="antidepressant" name="analgesic" value="antidepressant">
-            <label for="antidepressant">Antidepressant</label><br>
-    
-            <input type="radio" id="cough" name="analgesic" value="cough">
-            <label for="cough">Cough Suppressant</label><br>
-    
-            <input type="radio" id="sedative" name="analgesic" value="sedative">
-            <label for="sedative">Sedative</label><br>
-    
-            <h3>2. True/False. There is only one type of pain.</h3>
-    
-            <input type="radio" id="true" name="one_pain" value="true">
-            <label for="true">True</label><br>
-    
-            <input type="radio" id="false" name="one_pain" value="false">
-            <label for="false">False</label><br>
-    
-            <h3>3. True/False. Traditional analgesics are the best option for neuropathic pain.</h3>
-    
-            <input type="radio" id="true" name="neuropathic" value="true">
-            <label for="true">True</label><br>
-    
-            <input type="radio" id="false" name="neuropathic" value="false">
-            <label for="false">False</label><br>
-    
-            <input class="submit" type="submit" value="Submit Quiz">
-        </form>
+    <div class="go_back">
+        <div><a href="/drugs/analgesics.html">Go Back to Analgesics</a></div>
+        <div><a href="/index.html">Back to Homepage</a></div>
     </div>
 
-    <script src="/timer.js"></script>
-    <script src="/app.js"></script>
+    <script>
+        var questions = [
+        {
+            question: "What is an analgesic?",
+            answers: {
+                A: 'Painkiller',
+                B: 'Antidepressant',
+                C: 'Cough Supressant',
+                D: 'Sedative'
+            },
+            correctAnswer: 'A'
+        },
+        {
+            question: "True/False. There is only one type of pain.",
+            answers: {
+                A: 'True',
+                B: 'False'
+            },
+            correctAnswer: 'B'
+        },
+        {
+            question: "True/False. Traditional analgesics are the best option for neuropathic pain.",
+            answers: {
+                A: 'True',
+                B: 'False'
+            },
+            correctAnswer: 'B'
+        }
+    ];
+    </script>
 
+    <script src="/quiz.js"></script>
 </body>
 </html>

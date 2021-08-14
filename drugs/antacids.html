@@ -10,26 +10,55 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="/index.html">Homepage</a></li>
-            <li><a href="analgesics.html">Analgesics</a></li>
-        </ul>
+        <a href="/index.html">Homepage</a>
+
+        <div class="dropdown">
+            <button class="dropdownButton"">Drug Topics &#129139;</button>
+
+            <div class="dropdownContent">
+                <a href="analgesics.html">Analgesics</a>
+                <a href="antacids.html" class="current">Antacids</a>
+                <a href="antiarrhythmics.html">Antiarrhythmics</a>
+                <a href="antibiotics.html">Antibiotics</a>
+                <a href="anticoagulants.html">Anticoagulants</a>
+                <a href="antidepressants.html">Antidepressants</a>
+                <a href="antiemetics.html">Antiemetics</a>
+                <a href="antihistamines.html">Antihistamines</a>
+                <a href="antihypertensives.html">Antihypertensives</a>
+                <a href="antipyretics.html">Antipyretics</a>
+                <a href="antivirals.html">Antivirals</a>
+                <a href="beta-blockers.html">Beta-Blockers</a>
+                <a href="bronchodilators.html">Bronchodilators</a>
+                <a href="decongestants.html">Decongestants</a>
+                <a href="diuretics.html">Diuretics</a>
+                <a href="laxatives.html">Laxatives</a>
+                <a href="muscle-relaxants.html">Muscle Relaxants</a>
+                <a href="sedatives.html">Sedatives</a>
+            </div>
+        </div>
     </nav>
 
     <h1>Antacids</h1>
 
-    <!-- Will eventually use Noah's web scraping microservice to put information here. -->
-    <!-- For now, copy and paste information in manually -->
     <div class="info">
         <h3>What are antacids?</h3>
-        <p>An antacid is a substance which neutralizes stomach acidity and is used to relieve heartburn, indigestion or an upset stomach. Some antacids have been used in the treatment of constipation and diarrhea. Currently marketed antacids contain salts of aluminum, calcium, magnesium, or sodium. Some preparations contain a combination of two salts, such as magnesium carbonate and aluminum hydroxide.</p>
-        <p class="citation">Citation: Information taken from <a href="https://en.wikipedia.org/wiki/Antacid">Wikipedia</a> </p>
+
+        <p id="webscrape"></p>
+
+        <script type="text/javascript">
+            const webscrape = document.getElementById("webscrape");
+            fetch("https://cs361-322419.uw.r.appspot.com/api/Antacid")
+                .then((response) => response.json())
+                .then((data) => webscrape.innerHTML = data[0]);
+        </script>
+
+        <p class="citation">Citation: Information webscraped from <a href="https://en.wikipedia.org/wiki/Antacid">Wikipedia</a> </p>
     </div>
 
     </br>
 
     <div class="take_quiz">
-        <h3>Do you want to test your knowledge? Click on "Start Quiz" for a 3 question, 10 minute quiz!</h3>
+        <h3>Do you want to test your knowledge? Click on "Start Quiz" for a 3 question quiz!</h3>
         <div><a href="/quizzes/antacids_quiz.html">Start Quiz</a></div>
         <div><a href="/index.html">Back to Homepage</a></div>
     </div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/index.css">
     <link rel="stylesheet" href="/stylesheets/drugs.css">
-    <title>Analgesics</title>
+    <title>Laxatives</title>
 </head>
 <body>
     <nav>
@@ -16,7 +16,7 @@
             <button class="dropdownButton"">Drug Topics &#129139;</button>
 
             <div class="dropdownContent">
-                <a href="analgesics.html" class="current">Analgesics</a>
+                <a href="analgesics.html">Analgesics</a>
                 <a href="antacids.html">Antacids</a>
                 <a href="antiarrhythmics.html">Antiarrhythmics</a>
                 <a href="antibiotics.html">Antibiotics</a>
@@ -28,38 +28,38 @@
                 <a href="antipyretics.html">Antipyretics</a>
                 <a href="antivirals.html">Antivirals</a>
                 <a href="beta-blockers.html">Beta-Blockers</a>
-                <a href="bronchodilators.html">Bronchodilators</a>
+                <a href="bronchodilators.html"">Bronchodilators</a>
                 <a href="decongestants.html">Decongestants</a>
                 <a href="diuretics.html">Diuretics</a>
-                <a href="laxatives.html">Laxatives</a>
+                <a href="laxatives.html" class="current">Laxatives</a>
                 <a href="muscle-relaxants.html">Muscle Relaxants</a>
                 <a href="sedatives.html">Sedatives</a>
             </div>
         </div>
     </nav>
 
-    <h1>Analgesics</h1>
+    <h1>Laxatives</h1>
 
     <div class="info">
-        <h3>What are analgesics?</h3>
+        <h3>What are laxatives?</h3>
 
         <p id="webscrape"></p>
 
         <script type="text/javascript">
             const webscrape = document.getElementById("webscrape");
-            fetch("https://cs361-322419.uw.r.appspot.com/api/Analgesics")
+            fetch("https://cs361-322419.uw.r.appspot.com/api/Laxative")
                 .then((response) => response.json())
                 .then((data) => webscrape.innerHTML = data[0]);
         </script>
 
-        <p class="citation">Citation: Information webscraped from <a href="https://en.wikipedia.org/wiki/Analgesic">Wikipedia</a> </p>
+        <p class="citation">Citation: Information webscraped from <a href="https://en.wikipedia.org/wiki/Laxative">Wikipedia</a> </p>
     </div>
 
     </br>
 
     <div class="take_quiz">
         <h3>Do you want to test your knowledge? Click on "Start Quiz" for a 3 question quiz!</h3>
-        <div><a href="/quizzes/analgesics_quiz.html">Start Quiz</a></div>
+        <div><a href="/quizzes/laxatives_quiz.html">Start Quiz</a></div>
         <div><a href="/index.html">Back to Homepage</a></div>
     </div>
 

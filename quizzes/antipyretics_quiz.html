@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/index.css">
     <link rel="stylesheet" href="/stylesheets/quiz.css">
-    <title>Antacids Quiz</title>
+    <title>Antipyretics Quiz</title>
 </head>
 <body>
     <nav>
@@ -38,7 +38,7 @@
         </div>
     </nav>
 
-    <h1>Antacids Quiz</h1>
+    <h1>Antipyretics Quiz</h1>
 
     <div class="quiz">
         <div id="quiz"></div>
@@ -49,41 +49,42 @@
     <br>
 
     <div class="go_back">
-        <div><a href="/drugs/antacids.html">Go Back to Antacids</a></div>
+        <div><a href="/drugs/antipyretics.html">Go Back to Antipyretics</a></div>
         <div><a href="/index.html">Back to Homepage</a></div>
     </div>
 
     <script>
         var questions = [
         {
-            question: "What is an antacid?",
+            question: "What are antipyretics?",
             answers: {
-                A: 'Painkiller',
-                B: 'Substance that neutralizes stomach acid',
-                C: 'Cough Supressant',
-                D: 'Sedative'
+                A: 'Blood thinners',
+                B: 'Drugs for nausea and vomiting',
+                C: 'Drugs that treat allergies',
+                D: 'Drugs that reduce fever'
+            },
+            correctAnswer: 'D'
+        },
+        {
+            question: "True/False. Antipyretics have only one purpose and that is to reduce fever.",
+            answers: {
+                A: 'True',
+                B: 'False'
             },
             correctAnswer: 'B'
         },
         {
-            question: "True/False. Antacids are used in the treatment of constipation and diarrhea.",
+            question: "True/False. All experts agree that antipyretics should be used if you have a fever.",
             answers: {
                 A: 'True',
                 B: 'False'
             },
-            correctAnswer: 'A'
-        },
-        {
-            question: "True/False. Some antacids contain a combination of two salts.",
-            answers: {
-                A: 'True',
-                B: 'False'
-            },
-            correctAnswer: 'A'
+            correctAnswer: 'B'
         }
     ];
     </script>
 
     <script src="/quiz.js"></script>
+
 </body>
 </html>

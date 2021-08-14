@@ -1,21 +1,50 @@
-.timer, .quiz {
-    width: 60%;
+.quiz {
+    width: 50%;
     margin: auto;
     padding: 20px;
     border: 2px solid navy;
     font-size: 18px;
 }
 
-.submit {
+.go_back {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid navy;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.go_back a {
     background-color: navy;
     color: white;
     padding: 8px 20px;
-    margin-top: 10px;
+    margin: 20px;
+    text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.submit:hover {
+.go_back a:hover {
     background-color: forestgreen;
+}
+
+
+
+#submit {
+    background-color: lightgray;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#submit:hover, #submit.active {
+    background-color: yellow;
 }

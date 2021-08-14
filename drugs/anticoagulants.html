@@ -10,30 +10,55 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="/index.html">Homepage</a></li>
-            <li><a href="analgesics.html">Analgesics</a></li>
-        </ul>
+        <a href="/index.html">Homepage</a>
+
+        <div class="dropdown">
+            <button class="dropdownButton"">Drug Topics &#129139;</button>
+
+            <div class="dropdownContent">
+                <a href="analgesics.html">Analgesics</a>
+                <a href="antacids.html">Antacids</a>
+                <a href="antiarrhythmics.html">Antiarrhythmics</a>
+                <a href="antibiotics.html">Antibiotics</a>
+                <a href="anticoagulants.html" class="current">Anticoagulants</a>
+                <a href="antidepressants.html">Antidepressants</a>
+                <a href="antiemetics.html">Antiemetics</a>
+                <a href="antihistamines.html">Antihistamines</a>
+                <a href="antihypertensives.html">Antihypertensives</a>
+                <a href="antipyretics.html">Antipyretics</a>
+                <a href="antivirals.html">Antivirals</a>
+                <a href="beta-blockers.html">Beta-Blockers</a>
+                <a href="bronchodilators.html">Bronchodilators</a>
+                <a href="decongestants.html">Decongestants</a>
+                <a href="diuretics.html">Diuretics</a>
+                <a href="laxatives.html">Laxatives</a>
+                <a href="muscle-relaxants.html">Muscle Relaxants</a>
+                <a href="sedatives.html">Sedatives</a>
+            </div>
+        </div>
     </nav>
 
     <h1>Anticoagulants</h1>
 
-    <!-- Will eventually use Noah's web scraping microservice to put information here. -->
-    <!-- For now, copy and paste information in manually -->
     <div class="info">
         <h3>What are anticoagulants?</h3>
-        <p>Anticoagulants, commonly known as blood thinners, are chemical substances that prevent or reduce coagulation of blood, prolonging the clotting time. Some of them occur naturally in blood-eating animals such as leeches and mosquitoes, where they help keep the bite area unclotted long enough for the animal to obtain some blood. As a class of medications, anticoagulants are used in therapy for thrombotic disorders. Oral anticoagulants (OACs) are taken by many people in pill or tablet form, and various intravenous anticoagulant dosage forms are used in hospitals. Some anticoagulants are used in medical equipment, such as sample tubes, blood transfusion bags, heart-lung machines, and dialysis equipment. One of the first anticoagulants, warfarin, was initially approved as a rodenticide.
 
-        Anticoagulants are closely related to antiplatelet drugs and thrombolytic drugs by manipulating the various pathways of blood coagulation. Specifically, antiplatelet drugs inhibit platelet aggregation (clumping together), whereas anticoagulants inhibit specific pathways of the coagulation cascade, which happens after the initial platelet aggregation and ultimately leads to formation of fibrin and stable aggregated platelet products.
-            
-        Common anticoagulants include warfarin and heparin.</p>
-        <p class="citation">Citation: Information taken from <a href="https://en.wikipedia.org/wiki/Anticoagulant">Wikipedia</a> </p>
+        <p id="webscrape"></p>
+
+        <script type="text/javascript">
+            const webscrape = document.getElementById("webscrape");
+            fetch("https://cs361-322419.uw.r.appspot.com/api/Anticoagulant")
+                .then((response) => response.json())
+                .then((data) => webscrape.innerHTML = data[0]);
+        </script>
+
+        <p class="citation">Citation: Information webscraped from <a href="https://en.wikipedia.org/wiki/Anticoagulant">Wikipedia</a> </p>
     </div>
 
     </br>
 
     <div class="take_quiz">
-        <h3>Do you want to test your knowledge? Click on "Start Quiz" for a 3 question, 10 minute quiz!</h3>
+        <h3>Do you want to test your knowledge? Click on "Start Quiz" for a 3 question quiz!</h3>
         <div><a href="/quizzes/anticoagulants_quiz.html">Start Quiz</a></div>
         <div><a href="/index.html">Back to Homepage</a></div>
     </div>
